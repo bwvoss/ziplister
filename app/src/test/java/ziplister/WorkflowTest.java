@@ -24,9 +24,9 @@ public class WorkflowTest {
         };
 
         Workflow classUnderTest = new Workflow(todos);
+        assertEquals(0.0, classUnderTest.currentProgressPercentage(), 0.0);
 
         classUnderTest.currentItemDone();
-
         assertEquals(50.0, classUnderTest.currentProgressPercentage(), 0.0);
 
         classUnderTest.currentItemDone();
