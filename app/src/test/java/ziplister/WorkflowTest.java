@@ -16,4 +16,20 @@ public class WorkflowTest {
 
         assertTrue(classUnderTest.isFinished());
     }
+
+    @Test public void givesCurrentProgressPercentage() {
+        String[] todos = { 
+            "Go do task X",
+            "And then task Y"
+        };
+
+        Workflow classUnderTest = new Workflow(todos);
+
+        classUnderTest.currentItemDone();
+
+        assertEquals(50.0, classUnderTest.currentProgressPercentage(), 0.0);
+
+        classUnderTest.currentItemDone();
+        assertEquals(100.0, classUnderTest.currentProgressPercentage(), 0.0);
+    }
 }
