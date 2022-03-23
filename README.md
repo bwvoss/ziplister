@@ -1,14 +1,3 @@
-## TODO List
-- Setup google home dialogue interactions; interaction layer
-- Local dev container setup; Run in Memory locally with a task configurations directory
-- Kube local
-- Setup deploys to google cloud/GH actions?
-- Persistence (relational db) 
-- Rewrite simple static list workflow to use relational db
-- Write metrics/impact layer
-- Implement complex/dynamic actions layer
-- Find best practice gradle plugins for static code analysis, cve scanning, etc
-
 # Architectural Layers
 1. Interaction Layer: Google Home
 2. Checklist Metrics/Impact Layer: Doesn't know about the workflow logic, just an API to understand effectiveness of specific workflows
@@ -17,4 +6,13 @@
 
 ## Current focus: Workflow layer
 - using a single array for action items with no actual programming interface, but will get introduced when action item use cases are.
-- 
+ 
+# Usage Milestones
+- *NOW:* use it in memory, cli
+- use it with metrics (rds persistence perhaps in container), cli
+- see a dashboard summary on the web, springboot, kube/container setup, github actions to google cloud
+- use with google home, deploy to google cloud, springboot
+- dynamic items in workflow
+
+## Backlog
+- User defines checklist as an array, runs through it in memory on CLI
